@@ -1,0 +1,45 @@
+.logo {
+  background-color: var(--dark);
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+
+  img {
+    width: 15rem;
+  }
+}
+
+.informations {
+  padding: 5rem 10rem;
+  width: 100%;
+
+  .title {
+    font-size: 2rem;
+    color: var(--dark-grey);
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .line {
+    background-color: var(--dark-grey);
+    height: .5rem;
+    width: 7rem;
+    margin-top: 1rem;
+  }
+
+  .description {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: var(--light-grey);
+  }
+}
+
+@media (max-width:425px) {
+  .informations {
+    padding: 8rem 1rem;
+
+    .title {
+      font-size: 2.5rem;
+    }
+  }
+}

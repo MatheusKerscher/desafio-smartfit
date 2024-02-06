@@ -1,0 +1,54 @@
+<section class="form-container">
+  <div class="hours-container">
+    <img src="/assets/images/icon-hour.png" alt="" />
+    <p>Horário</p>
+  </div>
+
+  <form>
+    <p class="form-title">Qual período quer treinar?</p>
+
+    <div class="hours-training-container">
+      <div class="container-input-hours-training">
+        <input class="input-hour" type="radio" name="hour" id="morning-hour" />
+        <label for="morning-hour">
+          <span> Manhã </span>
+          <span> 06:00 às 12:00 </span>
+        </label>
+      </div>
+
+      <div class="container-input-hours-training">
+        <input class="input-hour" type="radio" name="hour" id="afternoon-hour" />
+        <label for="afternoon-hour">
+          <span> Tarde </span>
+          <span> 06:00 às 12:00 </span>
+        </label>
+      </div>
+
+      <div class="container-input-hours-training">
+        <input class="input-hour" type="radio" name="hour" id="night-hour" />
+        <label for="night-hour">
+          <span> Noite </span>
+          <span> 18:01 às 23:00 </span>
+        </label>
+      </div>
+    </div>
+
+    <div class="extra-data">
+      <div class="show-closed-units">
+        <input class="input-filter" type="checkbox" name="closed-units" id="closed-units" />
+        <label for="closed-units"> Exibir unidades fechadas</label>
+      </div>
+
+      <div>
+        <span> Resultados encontrados: </span>
+        <span class="result-count"> 0 </span>
+      </div>
+    </div>
+
+    <div class="btns-conatiner">
+      <button class="btn-search">Encontrar unidade</button>
+
+      <button class="btn-clear">Limpar</button>
+    </div>
+  </form>
+</section>

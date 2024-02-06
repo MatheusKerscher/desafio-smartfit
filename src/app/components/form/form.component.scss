@@ -1,0 +1,93 @@
+.btn-basic {
+  height: 3rem;
+  width: 18rem;
+  text-transform: uppercase;
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-container {
+  border: 2px solid var(--light-text);
+  border-radius: 6px;
+  padding: 1.4rem;
+  color: var(--light-grey);
+  box-shadow: 0 2px 0 2px var(--light-text);
+
+  .hours-container {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 2rem;
+    }
+
+    p {
+      margin-left: 0.6rem;
+    }
+  }
+
+  .form-title {
+    padding: 2rem 0 1rem 1rem;
+    font-size: 2rem;
+    font-weight: 100;
+    border-bottom: 2px solid var(--light-text);
+  }
+
+  .input-hour,
+  .input-filter,
+  label {
+    cursor: pointer;
+  }
+
+  .hours-training-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+
+    .container-input-hours-training {
+      border-bottom: 1px solid var(--light-text);
+      margin-top: 2rem;
+      padding-bottom: 0.8rem;
+    }
+  }
+
+  .extra-data {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+
+    label,
+    span {
+      font-size: 1.2rem;
+    }
+
+    .result-count {
+      color: var(--dark);
+      font-weight: 700;
+    }
+  }
+
+  .btns-conatiner {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    .btn-search {
+      @extend .btn-basic;
+      border: none;
+      background-color: var(--yellow);
+    }
+
+    .btn-clear {
+      @extend .btn-basic;
+      border-color: var(--light-grey);
+      background-color: transparent;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
