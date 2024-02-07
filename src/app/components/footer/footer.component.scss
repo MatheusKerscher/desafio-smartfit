@@ -1,0 +1,18 @@
+.footer-container {
+  background-color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.6rem 0;
+
+  .logo-container {
+    .logo {
+      width: 160px;
+    }
+  }
+
+  .rights-reserved {
+    margin-top: 1rem;
+    color: var(--light-text);
+  }
+}
