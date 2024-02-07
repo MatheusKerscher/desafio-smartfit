@@ -1,0 +1,55 @@
+<div class="card-unit">
+  <div class="card-header">
+    <p class="status" [ngClass]="open ? 'status-open' : 'status-closed'">
+      {{ open ? "Aberto" : "Fechado" }}
+    </p>
+
+    <h2 class="unit-name">Unidade</h2>
+
+    <p class="unit-address">Endereço</p>
+
+    <hr />
+  </div>
+
+  <div class="card-main">
+    <div class="rules">
+      <img
+        class="rules-img"
+        src="/assets/images/required-mask.png"
+        alt="Uso obrigatório de máscara"
+      />
+      <img
+        class="rules-img"
+        src="/assets/images/recommended-towel.png"
+        alt="Uso recomendado de toalha"
+      />
+      <img
+        class="rules-img"
+        src="/assets/images/forbidden-fountain.png"
+        alt="Uso proibido de bebedouro"
+      />
+      <img
+        class="rules-img"
+        src="/assets/images/required-lockerroom.png"
+        alt="Uso liberado de vestiário"
+      />
+    </div>
+
+    <div class="operating-days">
+      <div class="days">
+        <h3>Seg. à Sex</h3>
+        <p>Horario</p>
+      </div>
+
+      <div class="days">
+        <h3>Sáb.</h3>
+        <p>Horário</p>
+      </div>
+
+      <div class="days">
+        <h3>Dom.</h3>
+        <p>Horário</p>
+      </div>
+    </div>
+  </div>
+</div>

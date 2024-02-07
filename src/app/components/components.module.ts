@@ -5,6 +5,7 @@ import { FormComponent } from './form/form.component';
 import { LegendComponent } from './legend/legend.component';
 import { ListComponent } from './list/list.component';
 import { FooterComponent } from './footer/footer.component';
+import { CardListComponent } from './card-list/card-list.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
     LegendComponent,
     ListComponent,
     FooterComponent,
+    CardListComponent,
   ],
   imports: [CommonModule],
   exports: [
