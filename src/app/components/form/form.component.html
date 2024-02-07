@@ -1,5 +1,5 @@
 <section class="form-container">
-  <div class="hours-container">
+  <div class="hours-title">
     <img src="/assets/images/icon-hour.png" alt="" />
     <p>Horário</p>
   </div>
@@ -7,39 +7,62 @@
   <form>
     <p class="form-title">Qual período quer treinar?</p>
 
-    <div class="hours-training-container">
-      <div class="container-input-hours-training">
-        <input class="input-hour" type="radio" name="hour" id="morning-hour" />
-        <label for="morning-hour">
-          <span> Manhã </span>
-          <span> 06:00 às 12:00 </span>
+    <div class="hours-container">
+      <div class="input-container">
+        <input
+          class="input-period"
+          type="radio"
+          name="hours-training"
+          id="morning-training"
+          value="morning"
+        />
+        <label class="label-container" for="morning-training">
+          <span class="label-period">Manhã</span>
+          <span class="label-hours">06:00 às 12:00</span>
         </label>
       </div>
 
-      <div class="container-input-hours-training">
-        <input class="input-hour" type="radio" name="hour" id="afternoon-hour" />
-        <label for="afternoon-hour">
-          <span> Tarde </span>
-          <span> 06:00 às 12:00 </span>
+      <div class="input-container">
+        <input
+          class="input-period"
+          type="radio"
+          name="hours-training"
+          id="afternoon-training"
+          value="afternoon"
+        />
+        <label class="label-container" for="afternoon-training">
+          <span class="label-period">Tarde</span>
+          <span class="label-hours">12:01 às 18:00</span>
         </label>
       </div>
 
-      <div class="container-input-hours-training">
-        <input class="input-hour" type="radio" name="hour" id="night-hour" />
-        <label for="night-hour">
-          <span> Noite </span>
-          <span> 18:01 às 23:00 </span>
+      <div class="input-container">
+        <input
+          class="input-period"
+          type="radio"
+          name="hours-training"
+          id="nigth-training"
+          value="nigth"
+        />
+        <label class="label-container" for="nigth-training">
+          <span class="label-period">Noite</span>
+          <span class="label-hours">18:01 às 23:00</span>
         </label>
       </div>
     </div>
 
-    <div class="extra-data">
+    <div class="extra-data-container">
       <div class="show-closed-units">
-        <input class="input-filter" type="checkbox" name="closed-units" id="closed-units" />
+        <input
+          class="input-filter"
+          type="checkbox"
+          name="closed-units"
+          id="closed-units"
+        />
         <label for="closed-units"> Exibir unidades fechadas</label>
       </div>
 
-      <div>
+      <div class="result-count-container">
         <span> Resultados encontrados: </span>
         <span class="result-count"> 0 </span>
       </div>

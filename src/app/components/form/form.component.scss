@@ -4,20 +4,21 @@
   text-transform: uppercase;
   color: var(--dark);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: center;
   border-radius: 6px;
+  word-wrap: break-word;
   cursor: pointer;
 }
 
 .form-container {
-  border: 2px solid var(--light-text);
+  border: 3px solid var(--light-text);
   border-radius: 6px;
   padding: 1.4rem;
   color: var(--light-grey);
   box-shadow: 0 2px 0 2px var(--light-text);
 
-  .hours-container {
+  .hours-title {
     display: flex;
     align-items: center;
 
@@ -34,31 +35,57 @@
     padding: 2rem 0 1rem 1rem;
     font-size: 2rem;
     font-weight: 100;
-    border-bottom: 2px solid var(--light-text);
+    border-bottom: 3px solid var(--light-text);
   }
 
-  .input-hour,
-  .input-filter,
-  label {
-    cursor: pointer;
-  }
-
-  .hours-training-container {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.2rem;
-
-    .container-input-hours-training {
+  .hours-container {
+    .input-container {
+      display: flex;
       border-bottom: 1px solid var(--light-text);
-      margin-top: 2rem;
+      margin-top: 1rem;
       padding-bottom: 0.8rem;
+
+      .input-period {
+        margin-right: 0.4rem;
+        width: 20px;
+        height: 23px;
+        vertical-align: middle;
+      }
+    }
+
+    .label-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+
+      .label-period {
+        font-size: 1.2rem;
+      }
+
+      .label-hours {
+        font-size: 1.2rem;
+      }
     }
   }
 
-  .extra-data {
+  .extra-data-container {
     display: flex;
     justify-content: space-between;
     margin: 2rem 0;
+
+    .show-closed-units {
+      input {
+        width: 20px;
+        height: 20px;
+        vertical-align: text-top;
+      }
+
+      input,
+      label {
+        cursor: pointer;
+      }
+    }
 
     label,
     span {
@@ -89,5 +116,29 @@
       box-shadow: none;
       outline: none;
     }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .extra-data-container {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+
+    label,
+    span {
+      font-size: 1.1rem !important;
+    }
+  }
+
+  .btns-conatiner {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+
+  .btn-basic {
+    width: 16rem;
+    font-size: 1rem !important;
   }
 }
