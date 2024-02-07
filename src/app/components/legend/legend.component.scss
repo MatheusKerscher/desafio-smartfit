@@ -1,0 +1,40 @@
+.legend-container {
+  background-color: var(--light-text);
+  margin: 2rem 0;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+
+  h4 {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .rules-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    .rules-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .rules-img {
+        width: 80px;
+      }
+
+      .rules-legend {
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .legend-container {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
