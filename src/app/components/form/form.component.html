@@ -4,17 +4,18 @@
     <p>Horário</p>
   </div>
 
-  <form>
+  <form [formGroup]="formWorkouts">
     <p class="form-title">Qual período quer treinar?</p>
 
     <div class="hours-container">
       <div class="input-container">
         <input
+          formControlName="period"
           class="input-period"
           type="radio"
-          name="hours-training"
+          name="period"
           id="morning-training"
-          value="morning"
+          value="06:00 às 12:00"
         />
         <label class="label-container" for="morning-training">
           <span class="label-period">Manhã</span>
@@ -24,11 +25,12 @@
 
       <div class="input-container">
         <input
+          formControlName="period"
           class="input-period"
           type="radio"
-          name="hours-training"
+          name="period"
           id="afternoon-training"
-          value="afternoon"
+          value="12:01 às 18:00"
         />
         <label class="label-container" for="afternoon-training">
           <span class="label-period">Tarde</span>
@@ -38,11 +40,12 @@
 
       <div class="input-container">
         <input
+          formControlName="period"
           class="input-period"
           type="radio"
-          name="hours-training"
+          name="period"
           id="nigth-training"
-          value="nigth"
+          value="18:01 às 23:00"
         />
         <label class="label-container" for="nigth-training">
           <span class="label-period">Noite</span>
@@ -54,6 +57,7 @@
     <div class="extra-data-container">
       <div class="show-closed-units">
         <input
+          formControlName="closedUnits"
           class="input-filter"
           type="checkbox"
           name="closed-units"
@@ -64,14 +68,16 @@
 
       <div class="result-count-container">
         <span> Resultados encontrados: </span>
-        <span class="result-count"> 0 </span>
+        <span class="result-count"> {{ countUnits }} </span>
       </div>
     </div>
 
     <div class="btns-conatiner">
-      <button class="btn-search">Encontrar unidade</button>
+      <button class="btn-search" (click)="searchGyms()">
+        Encontrar unidade
+      </button>
 
-      <button class="btn-clear">Limpar</button>
+      <button class="btn-clear" (click)="clearForm()">Limpar</button>
     </div>
   </form>
 </section>
