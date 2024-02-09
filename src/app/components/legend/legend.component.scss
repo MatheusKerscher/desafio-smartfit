@@ -3,7 +3,7 @@
   margin: 2rem 0;
   padding: 1.2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   h4 {
     text-align: center;
@@ -32,7 +32,7 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .legend-container {
     flex-direction: column;
     gap: 2.5rem;

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { GymUnit } from 'src/app/models/gym-unit.model';
 
 @Component({
   selector: 'app-card-list',
@@ -6,8 +7,13 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./card-list.component.scss'],
 })
 export class CardListComponent implements OnInit {
-  @Input() open: boolean = true;
+  @Input() location!: GymUnit;
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  innerHTML(text: string) {
+    document.querySelector('#location-address')!.innerHTML = text;
+  }
 }

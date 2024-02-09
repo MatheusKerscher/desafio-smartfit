@@ -1,54 +1,49 @@
 <div class="card-unit">
   <div class="card-header">
-    <p class="status" [ngClass]="open ? 'status-open' : 'status-closed'">
-      {{ open ? "Aberto" : "Fechado" }}
+    <p
+      class="status"
+      [ngClass]="location.opened ? 'status-open' : 'status-closed'"
+    >
+      {{ location.opened ? "Aberto" : "Fechado" }}
     </p>
 
-    <h2 class="unit-name">Unidade</h2>
+    <h2 class="unit-name">{{ location.title }}</h2>
 
-    <p class="unit-address">Endereço</p>
+    <p class="unit-address" id="location-address">
+      {{ innerHTML(location.content) }}
+    </p>
 
     <hr />
   </div>
 
-  <div class="card-main">
+  <div *ngIf="location?.opened" class="card-main">
     <div class="rules">
       <img
         class="rules-img"
-        src="/assets/images/required-mask.png"
-        alt="Uso obrigatório de máscara"
+        [src]="'/assets/images/' + location.mask + '-mask.png'"
+        alt="Uso de máscara"
       />
       <img
         class="rules-img"
-        src="/assets/images/recommended-towel.png"
-        alt="Uso recomendado de toalha"
+        [src]="'/assets/images/' + location.towel + '-towel.png'"
+        alt="Uso de toalha"
       />
       <img
         class="rules-img"
-        src="/assets/images/forbidden-fountain.png"
+        [src]="'/assets/images/' + location.fountain + '-fountain.png'"
         alt="Uso proibido de bebedouro"
       />
       <img
         class="rules-img"
-        src="/assets/images/required-lockerroom.png"
+        [src]="'/assets/images/' + location.locker_room + '-lockerroom.png'"
         alt="Uso liberado de vestiário"
       />
     </div>
 
     <div class="operating-days">
-      <div class="days">
-        <h3>Seg. à Sex</h3>
-        <p>Horario</p>
-      </div>
-
-      <div class="days">
-        <h3>Sáb.</h3>
-        <p>Horário</p>
-      </div>
-
-      <div class="days">
-        <h3>Dom.</h3>
-        <p>Horário</p>
+      <div class="days" *ngFor="let s of location.schedules">
+        <h3>{{ s.weekdays }}</h3>
+        <p>{{ s.hour }}</p>
       </div>
     </div>
   </div>

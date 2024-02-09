@@ -50,3 +50,15 @@ body {
   font-weight: 900;
   font-style: normal;
 }
+
+.margin-default {
+  margin-left: 10rem !important;
+  margin-right: 10rem !important;
+}
+
+@media (max-width: 425px) {
+  .margin-default {
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+  }
+}

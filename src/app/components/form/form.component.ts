@@ -52,5 +52,7 @@ export class FormComponent implements OnInit {
       period: null,
       closedUnits: false,
     });
+    this.countUnits = 0;
+    this.smartfitGymsService.clearResults();
   }
 }

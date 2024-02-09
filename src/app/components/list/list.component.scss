@@ -1,3 +1,52 @@
 .list-container {
-  margin: 2rem 0;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+
+  .card-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1.1rem;
+    padding: 1rem .6rem;
+    scrollbar-width: none;
+
+    /* Works on Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .controls {
+    position: relative;
+    top: 50%;
+    cursor: pointer;
+  }
+
+  .controls-left {
+    left: 4%;
+  }
+
+  .controls-right {
+    right: 4%;
+  }
+
+  .no-locations {
+    width: 100%;
+    text-align: center;
+    color: var(--medium-text);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .list-container {
+    gap: 0.4rem;
+
+    .controls {
+      display: none;
+    }
+  }
 }

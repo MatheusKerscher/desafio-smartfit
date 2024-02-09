@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Units } from '../models/units.model';
-import { Observable, map } from 'rxjs';
+import { Observable, Subject, map } from 'rxjs';
 import * as moment from 'moment';
 import { GymUnit } from '../models/gym-unit.model';
 
@@ -16,6 +16,8 @@ export class SmartfitGymsService {
   private header = new HttpHeaders({
     'Content-Type': 'application/json; charset=utf-8',
   });
+
+  resultGyms$: Subject<Units | null> = new Subject();
 
   constructor(private http: HttpClient) {}
 
@@ -37,32 +39,36 @@ export class SmartfitGymsService {
 
         result.locations = locations;
 
+        this.emitResult(result);
         return result;
       })
     );
   }
 
-  emitResult() {}
+  clearResults() {
+    this.emitResult(null);
+  }
+
+  private emitResult(units: Units | null) {
+    this.resultGyms$.next(units);
+  }
 
   private canUse(period: string, hour: string) {
     // Defina os períodos de funcionamento
-    const horarios = hour?.split(' às ');
-    const horarioAbertura = moment(`${horarios[0]?.split('h')[0]}:00`, 'HH:mm');
-    const horarioFechamento = moment(
-      `${horarios[1]?.split('h')[0]}:00`,
-      'HH:mm'
-    );
+    const hours = hour?.split(' às ');
+    const hourOpen = moment(`${hours[0]?.split('h')[0]}:00`, 'HH:mm');
+    const hourClosed = moment(`${hours[1]?.split('h')[0]}:00`, 'HH:mm');
 
     // Defina o período de uso que você deseja verificar
     const periodo = period?.split(' às ');
-    const periodoDeUsoInicio = moment(periodo[0]?.split('h')[0], 'HH:mm');
-    const periodoDeUsoFim = moment(periodo[1]?.split('h')[0], 'HH:mm');
+    const periodoInicio = moment(periodo[0]?.split('h')[0], 'HH:mm');
+    const periodoFim = moment(periodo[1]?.split('h')[0], 'HH:mm');
 
     // Verifique se o período de uso está dentro do período de funcionamento
     if (
-      periodoDeUsoInicio.isSameOrAfter(horarioAbertura) &&
-      periodoDeUsoInicio.isBefore(horarioFechamento) &&
-      periodoDeUsoFim.isSameOrBefore(horarioFechamento)
+      periodoInicio.isSameOrAfter(hourOpen) &&
+      periodoInicio.isBefore(hourClosed) &&
+      periodoFim.isSameOrBefore(hourClosed)
     ) {
       return true;
     } else {

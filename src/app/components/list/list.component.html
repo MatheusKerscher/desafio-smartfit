@@ -1,3 +1,25 @@
 <section class="list-container">
-  <app-card-list></app-card-list>
+  <ng-container *ngIf="(locations?.locations)!.length > 0; else noLocations">
+    <div *ngIf="locations.locations.length > 1">
+      <div class="controls control-left" (click)="scrolLeft()">
+        <img src="/assets/images/left-arrow.svg" alt="" width="22px" />
+      </div>
+    </div>
+
+    <div class="card-container" id="card-slider">
+      <div *ngFor="let l of locations.locations">
+        <app-card-list [location]="l"></app-card-list>
+      </div>
+    </div>
+
+    <div *ngIf="locations.locations.length > 1">
+      <div class="controls control-right" (click)="scrolRight()">
+        <img src="/assets/images/right-arrow.svg" alt="" width="20px" />
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #noLocations>
+    <p class="no-locations">Nenhuma unidade encontrada</p>
+  </ng-template>
 </section>
