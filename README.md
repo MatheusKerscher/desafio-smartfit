@@ -1,5 +1,5 @@
 
-# SportEase UFPR - Client
+# Desafio Smart Fit
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/MatheusKerscher/desafio-smartfit?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/MatheusKerscher/desafio-smartfit?style=for-the-badge)
@@ -19,9 +19,9 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
  
 - Você deve ter instalado na sua máquina [Node.js](https://nodejs.org/en) e [Angular CLI](https://angular.io/guide/setup-local)
 
-## 🚀 Instalando SportEase UFPR - Client
+## 🚀 Instalando o projeto
 
-Para instalar o SportEase UFPR - Manager, siga estas etapas:
+Para instalar o projeto siga estas etapas:
 
 Clone o repositório:
 
@@ -40,7 +40,7 @@ Instale as dependências do projeto:
 npm i
 ```
 
-## ☕ Usando SportEase UFPR - Manager
+## ☕ Usando o projeto
 
 Para usar o site, siga estas etapas:
 
