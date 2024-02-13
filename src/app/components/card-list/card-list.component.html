@@ -9,8 +9,8 @@
 
     <h2 class="unit-name">{{ location.title }}</h2>
 
-    <p class="unit-address" id="location-address">
-      {{ innerHTML(location.content) }}
+    <p class="unit-address" id="{{ location.id }}">
+      {{ innerHTML(location.id, location.content) }}
     </p>
 
     <hr />

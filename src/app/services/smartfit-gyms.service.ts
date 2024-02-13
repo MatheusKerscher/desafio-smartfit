@@ -28,7 +28,9 @@ export class SmartfitGymsService {
         result.locations?.forEach((l) =>
           l?.schedules?.forEach((s) => {
             if (this.canUse(period, s.hour)) {
-              locations.push(l);
+              if (locations.filter((g) => g.id == l.id).length == 0) {
+                locations.push(l);
+              }
             }
           })
         );

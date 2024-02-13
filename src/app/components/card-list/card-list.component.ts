@@ -13,7 +13,7 @@ export class CardListComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  innerHTML(text: string) {
-    document.querySelector('#location-address')!.innerHTML = text;
+  innerHTML(id: number, text: string) {
+    document.getElementById(id.toString())!.innerHTML = text;
   }
 }
