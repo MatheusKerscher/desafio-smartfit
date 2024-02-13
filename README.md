@@ -1,10 +1,6 @@
 
 # Desafio Smart Fit
 
-![GitHub repo size](https://img.shields.io/github/repo-size/MatheusKerscher/desafio-smartfit?style=for-the-badge) 
-![GitHub language count](https://img.shields.io/github/languages/count/MatheusKerscher/desafio-smartfit?style=for-the-badge)
-
-
 <img src="/src/assets/preview/preview.png" alt="Página da Smart Fit">
 
 > O desafio da Smart Fit é um site no qual o usuário consegue escolher o período de treino e visualizar as unidades disponíveis com as informações de funcionamento de cada um. Também é possível filtrar entre exibir ou não as unidades fechadas.
