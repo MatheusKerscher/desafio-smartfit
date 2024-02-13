@@ -1,7 +1,7 @@
 
 # Desafio Smart Fit
 
-![GitHub repo size](https://img.shields.io/github/repo-size/MatheusKerscher/desafio-smartfit?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/MatheusKerscher/desafio-smartfit?style=for-the-badge) 
 ![GitHub language count](https://img.shields.io/github/languages/count/MatheusKerscher/desafio-smartfit?style=for-the-badge)
 
 
