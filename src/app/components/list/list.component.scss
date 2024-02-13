@@ -9,7 +9,7 @@
     overflow-x: auto;
     scroll-behavior: smooth;
     gap: 1.1rem;
-    padding: 1rem .6rem;
+    padding: 1rem 0.6rem;
     scrollbar-width: none;
 
     /* Works on Chrome, Edge, and Safari */
@@ -39,6 +39,10 @@
     font-size: 1.2rem;
     margin-bottom: 1rem;
   }
+}
+
+.cards-centered {
+  justify-content: center;
 }
 
 @media screen and (max-width: 425px) {

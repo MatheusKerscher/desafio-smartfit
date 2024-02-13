@@ -1,6 +1,9 @@
-<section class="list-container">
+<section
+  class="list-container"
+  [ngClass]="{ 'cards-centered': locations.locations.length <= 2 }"
+>
   <ng-container *ngIf="(locations?.locations)!.length > 0; else noLocations">
-    <div *ngIf="locations.locations.length > 1">
+    <div *ngIf="locations.locations.length > 2">
       <div class="controls control-left" (click)="scrolLeft()">
         <img src="/assets/images/left-arrow.svg" alt="" width="22px" />
       </div>
@@ -12,7 +15,7 @@
       </div>
     </div>
 
-    <div *ngIf="locations.locations.length > 1">
+    <div *ngIf="locations.locations.length > 2">
       <div class="controls control-right" (click)="scrolRight()">
         <img src="/assets/images/right-arrow.svg" alt="" width="20px" />
       </div>
